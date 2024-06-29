@@ -141,8 +141,8 @@ public class BankAccount {
         return billingAddress;
     }
 
-    public String getBalance() {
-        return formatarSaldo(balance / 100);
+    public int getBalance() {
+        return balance;
     }
 
     public String getNumAccount() {
