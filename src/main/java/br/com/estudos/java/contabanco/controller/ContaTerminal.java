@@ -3,6 +3,8 @@ package br.com.estudos.java.contabanco;
 import java.util.HashMap;
 import java.util.Scanner;
 
+import br.com.estudos.java.contabanco.model.BankAccount;
+import br.com.estudos.java.contabanco.service.BankAccountUtil;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -37,13 +39,13 @@ public class ContaTerminal {
 			}
 		} while (password.length() != 4);
 
-		BankAccount bankAccount = new BankAccount(name, address, initialBalance, password);
-		System.out.println("Conta criada com sucesso!");
-		System.out.println("Obrigada por ser nosso cliente " + bankAccount.getCustomerName());
-		System.out.println("Anote a sua agência e conta. Esses dados serão usados para realizar o login!");
-		bankAccount.getAccountDetails();
-		String numAccount = bankAccount.getNumAccount() + "-" + bankAccount.getDigitCheckAccount();
-		accountsDataBase.put(numAccount, bankAccount);
+//		BankAccount bankAccount = new BankAccount(name, address, initialBalance, password);
+//		System.out.println("Conta criada com sucesso!");
+//		System.out.println("Obrigada por ser nosso cliente " + bankAccount.getCustomerName());
+//		System.out.println("Anote a sua agência e conta. Esses dados serão usados para realizar o login!");
+//		bankAccount.getAccountDetails();
+//		String numAccount = bankAccount.getNumAccount() + "-" + bankAccount.getDigitCheckAccount();
+//		accountsDataBase.put(numAccount, bankAccount);
 	}
 
 	public void login(String identifier, String password) {
@@ -95,7 +97,7 @@ public class ContaTerminal {
 					String numAccount = account.getNumAccount() + "-" + account.getDigitCheckAccount();
 					int balance = account.getBalance();
 					if (balance > 0) {
-						System.out.println("Você possui um saldo de " + BankAccount.formatarSaldo(balance));
+						System.out.println("Você possui um saldo de " + BankAccountUtil.formatBalance(balance));
 						System.out.println("Realize o saque antes de continuar a exclusão da conta");
 					} else {
 						accountsDataBase.remove(numAccount);
