@@ -49,7 +49,6 @@ Este é um projeto simples de gerenciamento de contas bancárias, desenvolvido e
     - Insira o número da conta e a senha.
 
 4. Após o login, você verá um menu com as opções para depósito, saque, exibir extrato e deletar conta.
-    - Os valores para depósito e saque devem ser inseridos em centavos. Exemplo: para depositar R$ 100,00 deve ser informado 10000. 
 
 ## Exemplo de Uso
 
@@ -62,7 +61,7 @@ Digite uma opção: 1
 
 Digite o nome do cliente: João
 Digite o endereço de cobrança: Rua ABC, 123
-Digite o valor a ser depositado: 5000
+Digite o valor a ser depositado: 50,00
 Digite a senha: 1234
 
 Conta criada com sucesso!
