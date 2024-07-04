@@ -1,4 +1,4 @@
-package br.com.estudos.java.contabanco.service;
+package br.com.estudos.java.contabanco.util;
 
 import java.text.NumberFormat;
 import java.util.ArrayList;
@@ -9,7 +9,7 @@ import java.util.Random;
 public class BankAccountUtil {
     private static List<String> createdAccounts = new ArrayList<>();
 
-    public static String generatNumAccount() {
+    public static String generateNumAccount() {
         Random random = new Random();
         String numAccount;
 
